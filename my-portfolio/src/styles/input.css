@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-Barlow: "Barlow Semi Condensed", sans-serif;
+    --font-Poppins: "Poppins", sans-serif;
+
+    --color-blue: #a5c4f1
+}
+
+@layer {
+    h1 {
+        @apply text-center text-4xl font-extrabold text-[#9dc9ef] lg:text-left lg:text-5xl
+    }
+    .btn {
+        @apply bg-blue
+        text-white p-3 rounded-2xl
+        lg:text-lg lg:p-3
+        hover:shadow-lg shadow-blue/30 hover:scale-105 transition-all
+    }
+
+    .linkicon {
+        @apply flex items-center justify-center gap-10 mb-10
+    }
+
+    .linkeff {
+        @apply hover:shadow-lg hover:shadow-blue/80 rounded-full
+    }
+    .tabBtn {
+        @apply flex items-center justify-center
+        border-3 p-2 rounded-full size-10
+        font-Barlow 
+        lg:size-17 lg:text-2xl
+        cursor-pointer
+        transition-all hover:scale-105
+    }
+
+    .tabbtn>li {
+        @apply flex items-center space-x-5 text-xl
+        font-Poppins
+    }
+
+    .tabbtn>li>p {
+        @apply text-shadow-lg text-shadow-black/20
+    }
+
+    .activeTabBtn {
+        @apply text-[#aed6fa] border-[#aed6fa] 
+        bg-white shadow-[10px_8px_5px_0px] shadow-[#bcd1d6]/50
+    }
+
+    .normalTabBtn {
+        @apply text-white border-[#a1a1a1] bg-[#c5c5c5]
+    }
+
+    .btnp {
+        @apply bg-blue
+        text-white p-3 rounded-2xl
+        lg:text-sm 
+        hover:shadow-lg shadow-blue/30 hover:scale-105 transition-all
+    }
+}
